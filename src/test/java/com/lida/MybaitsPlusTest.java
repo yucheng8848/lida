@@ -1,6 +1,12 @@
 package com.lida;
 
+import com.lida.entity.Businesses;
 import com.lida.entity.Customers;
+import com.lida.mapper.BusinessesMapper;
+import com.lida.mapper.ValuationMapper;
+import com.lida.vo.OrdersVo;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
@@ -8,13 +14,16 @@ import java.util.List;
 @SpringBootTest
 public class MybaitsPlusTest {
 
-//    @Autowired
-//    private CustomersMapper customersMapper;
-//
-//    @Test
-//    public void testSelectList(){
-//        //通过条件构造器查询list
-//        List<Customers> list = customersMapper.selectList(null);
-//        list.forEach(System.out::println);
-//    }
+    @Autowired
+    private ValuationMapper valuationMapper;
+
+    @Autowired
+    private BusinessesMapper businessesMapper;
+
+    @Test
+    public void testSelectList(){
+        //通过条件构造器查询list
+        List<Businesses> list = businessesMapper.selectAllByNameLikeOrLabelLike("师", "自助");
+        list.forEach(System.out::println);
+    }
 }
