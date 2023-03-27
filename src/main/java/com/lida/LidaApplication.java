@@ -8,7 +8,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
 @MapperScan("com.lida.mapper")
-@EnableWebMvc
 public class LidaApplication {
 
     public static void main(String[] args) {
