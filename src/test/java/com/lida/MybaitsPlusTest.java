@@ -34,7 +34,6 @@ public class MybaitsPlusTest {
 
     @Test
     public void testSelectList(){
-        likesMapper.hhhh();
 //        Likes likes = new Likes();
 //        likes.setCustomerId(1);
 //        likes.setBusinessesId(1);
